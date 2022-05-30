@@ -15,7 +15,10 @@ let crearAleatorio = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-let completarBoliche = (personas: number[], capacidad: number): number[] => {
+let completarEdadesPersonas = (
+  personas: number[],
+  capacidad: number
+): number[] => {
   let indice: number;
   for (indice = 0; indice < capacidad; indice++) {
     personas[indice] = crearAleatorio(18, 40);
@@ -45,7 +48,7 @@ let calcularMenores = (personas: number[], capacidad: number): number => {
   return menores21;
 };
 
-completarBoliche(personas, capacidad);
+completarEdadesPersonas(personas, capacidad);
 calcularMayores(personas, capacidad);
 calcularMenores(personas, capacidad);
 
